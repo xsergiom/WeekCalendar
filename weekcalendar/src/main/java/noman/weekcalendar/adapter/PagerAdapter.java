@@ -1,9 +1,6 @@
 package noman.weekcalendar.adapter;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
@@ -14,6 +11,10 @@ import noman.weekcalendar.fragment.WeekFragment;
 
 import static noman.weekcalendar.fragment.WeekFragment.DATE_KEY;
 import static noman.weekcalendar.view.WeekPager.NUM_OF_PAGES;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 /**
  * Created by nor on 12/4/2015.

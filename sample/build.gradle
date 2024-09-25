@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.2'
 
+    namespace 'noman.sample'
+    compileSdk 35
     defaultConfig {
         applicationId "noman.weekcalendar"
-        minSdkVersion 14
-        targetSdkVersion 25
+        minSdkVersion 21
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
     }
@@ -17,15 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:25.1.0'
-   //compile 'noman.weekcalendar:weekcalendar:1.0.6'
-    compile project(':weekcalendar')
-
+    //implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation project(':weekcalendar')
+    implementation 'joda-time:joda-time:2.13.0'
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
 }
-
 
